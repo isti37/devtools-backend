@@ -1,4 +1,4 @@
-DevTools Backend
+DevTools Backend BUILD ERROR debugging (do not use this)
 ================
 
 A Node.JS implementation of the Chrome DevTools backend for debugging arbitrary web platforms (e.g. HbbTV applications on Smart TVs). It is the counterpart of the [devtools-frontend](https://github.com/ChromeDevTools/devtools-frontend) and is like [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html) just in "new".
