@@ -55,6 +55,7 @@
   "dependencies": {
     "babel-runtime": "~6.23.0",
     "body-parser": "~1.17.0",
+    "build": "^0.1.4",
     "cheerio": "^1.0.0-rc.2",
     "chrome-devtools-frontend": "1.0.485174",
     "cookie-parser": "~1.4.3",

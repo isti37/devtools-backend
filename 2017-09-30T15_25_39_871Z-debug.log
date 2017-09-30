@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run', 'build' ]
+2 info using npm@5.4.2
+3 info using node@v8.6.0
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info lifecycle devtools-backend@0.0.0~prebuild: devtools-backend@0.0.0
+6 info lifecycle devtools-backend@0.0.0~build: devtools-backend@0.0.0
+7 verbose lifecycle devtools-backend@0.0.0~build: unsafe-perm in lifecycle true
+8 verbose lifecycle devtools-backend@0.0.0~build: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/root/devtools-backend/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+9 verbose lifecycle devtools-backend@0.0.0~build: CWD: /root/devtools-backend
+10 silly lifecycle devtools-backend@0.0.0~build: Args: [ '-c', 'run-s build:*' ]
+11 silly lifecycle devtools-backend@0.0.0~build: Returned: code: 1  signal: null
+12 info lifecycle devtools-backend@0.0.0~build: Failed to exec build script
+13 verbose stack Error: devtools-backend@0.0.0 build: `run-s build:*`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:280:16)
+13 verbose stack     at emitTwo (events.js:125:13)
+13 verbose stack     at EventEmitter.emit (events.js:213:7)
+13 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+13 verbose stack     at emitTwo (events.js:125:13)
+13 verbose stack     at ChildProcess.emit (events.js:213:7)
+13 verbose stack     at maybeClose (internal/child_process.js:927:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+14 verbose pkgid devtools-backend@0.0.0
+15 verbose cwd /root/devtools-backend
+16 verbose Linux 4.2.6-1-pve
+17 verbose argv "/usr/bin/node" "/usr/bin/npm" "run" "build"
+18 verbose node v8.6.0
+19 verbose npm  v5.4.2
+20 error code ELIFECYCLE
+21 error errno 1
+22 error devtools-backend@0.0.0 build: `run-s build:*`
+22 error Exit status 1
+23 error Failed at the devtools-backend@0.0.0 build script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]
