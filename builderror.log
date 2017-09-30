@@ -1,0 +1,76 @@
+
+> devtools-backend@0.0.0 build /root/devtools-backend
+> run-s build:*
+
+
+> devtools-backend@0.0.0 build:driver /root/devtools-backend
+> run-s clean compile copy webpack
+
+
+> devtools-backend@0.0.0 clean /root/devtools-backend
+> rm -rf ./build
+
+
+> devtools-backend@0.0.0 compile /root/devtools-backend
+> babel lib/ -d build/ --ignore lib/frontend/
+
+lib/backend/domains/index.js -> build/backend/domains/index.js
+lib/backend/domains/log.js -> build/backend/domains/log.js
+lib/backend/domains/network.js -> build/backend/domains/network.js
+lib/backend/domains/page.js -> build/backend/domains/page.js
+lib/backend/domains/target.js -> build/backend/domains/target.js
+lib/backend/domains/webdriver.js -> build/backend/domains/webdriver.js
+lib/backend/index.js -> build/backend/index.js
+lib/backend/middleware/debugger.js -> build/backend/middleware/debugger.js
+lib/backend/middleware/index.js -> build/backend/middleware/index.js
+lib/backend/middleware/page.js -> build/backend/middleware/page.js
+lib/backend/page.js -> build/backend/page.js
+lib/backend/utils/request.js -> build/backend/utils/request.js
+lib/index.js -> build/index.js
+lib/logger.js -> build/logger.js
+lib/proxy.js -> build/proxy.js
+lib/utils.js -> build/utils.js
+
+> devtools-backend@0.0.0 copy /root/devtools-backend
+> cp -r ./views ./build
+
+
+> devtools-backend@0.0.0 webpack /root/devtools-backend
+> webpack --progress --colors --config .config/webpack.config
+
+Hash: [1m2a96f9a633b3f7f82ab6[39m[22m
+Version: webpack [1m2.7.0[39m[22m
+Time: [1m2380[39m[22mms
+              [1mAsset[39m[22m    [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m       [1mChunk Names[39m[22m
+[1m[33mscripts/launcher.js[39m[22m  [1m[33m468 kB[39m[22m       [1m0[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  scripts/launcher
+[1m[32mscripts/debugger.js[39m[22m  237 kB       [1m1[39m[22m  [1m[32m[emitted][39m[22m         scripts/debugger
+   [8] [1m../~/babel-runtime/helpers/classCallCheck.js[39m[22m 208 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [16] [1m./frontend/models/ObjectStore.js[39m[22m 1.71 kB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [17] [1m../~/babel-runtime/core-js/get-iterator.js[39m[22m 93 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [23] [1m./frontend/utils/common.js[39m[22m 2.76 kB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [24] [1m./frontend/utils/dom.js[39m[22m 2.25 kB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [25] [1m../~/babel-runtime/core-js/object/keys.js[39m[22m 92 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [82] [1m./frontend/utils/runtime.js[39m[22m 6.53 kB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+  [83] [1m./frontend/remoteDebugger.js[39m[22m 6.83 kB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+ [100] [1m../~/babel-runtime/core-js/object/get-own-property-descriptor.js[39m[22m 115 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+ [171] [1m./frontend/utils/polyfills.js[39m[22m 1.06 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+ [172] [1m../~/promise-polyfill/promise.js[39m[22m 6.24 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [173] [1m../~/socket.io-client/dist/socket.io.js[39m[22m 210 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [174] [1m./frontend/debugger.bundle.js[39m[22m 1.22 kB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+ [175] [1m./frontend/launcher.bundle.js[39m[22m 2.81 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [178] [1m../~/timers-browserify/main.js[39m[22m 1.36 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+    + 164 hidden modules
+
+> devtools-backend@0.0.0 build:devtools /root/devtools-backend
+> cd node_modules/chrome-devtools-frontend/scripts/gulp && npm run build && cd ../../../../
+
+
+> chrome-devtools-build@0.1.0 build /root/devtools-backend/node_modules/chrome-devtools-frontend/scripts/gulp
+> npm run gulp -- build
+
+
+> chrome-devtools-build@0.1.0 gulp /root/devtools-backend/node_modules/chrome-devtools-frontend/scripts/gulp
+> gulp "build"
+
+[15:16:25] Local gulp not found in ~/devtools-backend/node_modules/chrome-devtools-frontend/scripts/gulp
+[15:16:25] Try running: npm install gulp
